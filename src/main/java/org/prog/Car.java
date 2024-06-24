@@ -9,6 +9,10 @@ public class Car implements ITransport {
         milage += distance;
         goTo("somewhere");
     }
+    public void goTo() {
+        milage += 10;
+        goTo("somewhere");
+    }
 
     public void goTo(String destination) {
         goTo("current city", destination);

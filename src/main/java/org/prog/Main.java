@@ -53,9 +53,7 @@ public class Main {
         String s2 = "";
         String s3 = null;
 
-        car1.goTo(110);
-        paintItBlack(car1);
-        car1.goTo(60);
+
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(s3);
