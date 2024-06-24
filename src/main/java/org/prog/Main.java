@@ -26,9 +26,9 @@ public class Main {
         car1.color = "Red";
         car2.color = "Blue";
 
-        car1.goTo();
+        car1.goTo(15);
         paintItBlack(car1);
-        car1.goTo();
+        car1.goTo(25);
     }
 
     public static void paintItBlack(Car carToPaint) {
