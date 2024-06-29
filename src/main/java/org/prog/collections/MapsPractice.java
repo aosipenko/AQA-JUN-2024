@@ -29,5 +29,16 @@ public class MapsPractice {
         ownedCars.get(owner3).add(new Car());
         System.out.println(ownedCars.get(owner1).size());
         //TODO: HW4 starts here
+        paintCarsWithoutColor(ownedCars, "Black");
+    }
+
+    public static void paintCarsWithoutColor(Map<String, Set<Car>> ownedCars, String defaultColor) {
+        for (Set<Car> cars : ownedCars.values()) {
+            for (Car car : cars) {
+                if (car.getColor() == null || car.getColor().isEmpty()) {
+                    car.setColor(defaultColor);
+                }
+            }
+        }
     }
 }
