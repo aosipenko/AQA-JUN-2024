@@ -13,6 +13,17 @@ public class Car implements ITransport {
         milage += 10;
         goTo("somewhere");
     }
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Car car = (Car) obj;
+        return milage == car.milage &&
+                Objects.equals(color, car.color);
+    }
+    public int hashCode() {
+        return Objects.hash(color, milage);
+    }
+
 
     public void goTo(String destination) {
         goTo("current city", destination);
