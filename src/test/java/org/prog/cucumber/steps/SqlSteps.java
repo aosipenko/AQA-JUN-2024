@@ -57,8 +57,17 @@ public class SqlSteps {
     private void connectToDB() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/db", "user", "password");
+                getDbHost(), "user", "password");
         statement = connection.createStatement();
+    }
+
+    private String getDbHost() {
+        String driverType = System.getProperty("driver.type", "chrome");
+        if ("remote-mvn".equals(driverType)) {
+            return "jdbc:mysql://mysql-db-1:3306/db";
+        } else {
+            return "jdbc:mysql://localhost:3306/db";
+        }
     }
 
     private void closeConnection() throws SQLException {
