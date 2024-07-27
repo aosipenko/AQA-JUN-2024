@@ -51,4 +51,7 @@ public class Car implements ITransport {
     public String getColor() {
         return color;
     }
+    public int getMilage() {
+        return milage;
+    }
 }
