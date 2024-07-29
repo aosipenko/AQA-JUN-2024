@@ -9,6 +9,10 @@ import org.prog.util.CucumberStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 public class WebSteps {
 
     @Autowired
@@ -39,6 +43,16 @@ public class WebSteps {
                 count++;
             }
         }
+//        List<String> slinst = new ArrayList<>();
+//        Optional<String> opt = Optional.of("asd");
+//        // java lambda functions
+//
+//        slinst.stream().forEach(System.out::println);
+//
+//        for (String s : slinst) {
+//            System.out.println(s);
+//        }
+
         Assert.assertTrue(count >= amount, "expected at least " + amount
                 + " but was only " + count + " results for " + CucumberStorage.HOLDER.get(alias));
     }
