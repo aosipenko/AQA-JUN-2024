@@ -6,10 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PreDestroy;
 import java.time.Duration;
 import java.util.List;
 
+@Component
 public class GooglePage extends AbstractPage {
 
     private final static String URL = "https://google.com/";

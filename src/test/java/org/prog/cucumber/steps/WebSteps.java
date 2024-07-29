@@ -6,11 +6,13 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.prog.page.GooglePage;
 import org.prog.util.CucumberStorage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 
 public class WebSteps {
 
-    public static GooglePage googlePage;
+    @Autowired
+    private GooglePage googlePage;
 
     @Given("I load google page")
     public void loadGooglePage() {
