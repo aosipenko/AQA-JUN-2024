@@ -28,7 +28,7 @@ public class MapsPractice {
         ownedCars.get(owner3).add(car);
         ownedCars.get(owner3).add(new Car());
         System.out.println(ownedCars.get(owner1).size());
-        //TODO: HW4 starts here
+
         paintCarsWithoutColor(ownedCars, "Red");
     }
 
