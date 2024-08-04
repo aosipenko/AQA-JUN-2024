@@ -28,21 +28,9 @@ public class MapsPractice {
         ownedCars.get(owner3).add(car);
         ownedCars.get(owner3).add(new Car());
 
-        for (String ownerName : ownedCars.keySet()) {
-            Set<Car> carsBelongingToThisOwner = ownedCars.get(ownerName);
-            for (Car c : carsBelongingToThisOwner){
-                if (c.getColor() == null){
-                    c.setColor("Black");
                 }
             }
         }
-
-        for (String ownerName : ownedCars.keySet()){
-            Set<Car> carsBelongingToThisOwner = ownedCars.get(ownerName);
-            for (Car c : carsBelongingToThisOwner){
-                System.out.println(ownerName + " has a " + c.getColor() + " car");
             }
-        }
-        //TODO: HW4 starts here
     }
 }
